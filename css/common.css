@@ -65,6 +65,11 @@ nav li.current-page a {
     pointer-events: none;
 }
 
+nav li a:hover {
+    background-color: #5df2d6;
+    color: #00594c;
+}
+
 main {
     margin-top: 120px;
     overflow: auto;
