@@ -124,6 +124,10 @@ main p {
     margin-bottom: 16px;
 }
 
+#climalogo{
+    margin-right: 6px;
+}
+
 /* Media Query: Estilos a aplicar sólo en pantallas mayores a 400px */
 @media (min-width: 400px) {
     main {
