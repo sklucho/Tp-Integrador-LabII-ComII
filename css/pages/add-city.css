@@ -1,0 +1,79 @@
+label{
+    font-weight: bold;
+}
+
+input{
+    border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    height: 38px;
+    width: 240px;
+    font-weight: bold;
+    border: 1.8px solid #000000;
+    margin-top: 6px;
+    margin-left: -4px;
+}
+
+button{
+    margin-top: 15px;
+    margin-left: 70px;
+    border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    height: 40px;
+    width: 90px;
+    background-color: #00594c;
+    color: white;
+    font-weight: bolder;
+    font-size:90%;
+    border: 0px solid #000000;
+}
+
+.mensajes{
+    margin-top: 70px;
+    margin-left: 20px;
+}
+
+.mensajes #green{
+    border-radius: 16px 16px 16px 16px;
+    -webkit-border-radius: 16px 16px 16px 16px;
+    -moz-border-radius: 16px 16px 16px 16px;
+    border: 0px solid #000000;
+    background-color: rgb(35, 145, 71);
+    height: 55px;
+    width: 500px;
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.mensajes #red{
+    border-radius: 16px 16px 16px 16px;
+    -webkit-border-radius: 16px 16px 16px 16px;
+    -moz-border-radius: 16px 16px 16px 16px;
+    border: 0px solid #000000;
+    background-color: rgba(252, 27, 27, 0.87);
+    height: 70px;
+    width: 500px;
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+    font-weight: bold;
+    margin-top: 50px;   
+}
+
+.mensajes #yellow{
+    border-radius: 16px 16px 16px 16px;
+    -webkit-border-radius: 16px 16px 16px 16px;
+    -moz-border-radius: 16px 16px 16px 16px;
+    border: 0px solid #000000;
+    background-color: rgb(255, 196, 0);
+    height: 55px;
+    width: 500px;
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+    font-weight: bold;
+    margin-top: 50px;
+}

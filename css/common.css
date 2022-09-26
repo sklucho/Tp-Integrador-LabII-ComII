@@ -12,7 +12,7 @@
     --color-active: #5df2d6;
     --color-back-active: #04957d;
     --color-gradient: linear-gradient(to right, var(--color-theme),
-var(--color-back-active));
+            var(--color-back-active));
 }
 
 body {
@@ -37,6 +37,14 @@ header {
     top: 0;
     width: 100%;
     background: var(--color-theme);
+    border-radius: 0px 0px 40px 40px;
+    -webkit-border-radius: 0px 0px 40px 40px;
+    -moz-border-radius: 0px 0px 40px 40px;
+    border-bottom: 2px solid #5df2d6;
+    background: #00594c;
+    background: linear-gradient(76deg,#00594c 0%, #04957d 80%);
+    background: -webkit-linear-gradient(76deg,#00594c 0%, #04957d 80%);
+    background: -moz-linear-gradient(76deg,#00594c 0%, #04957d 80%);
 }
 
 nav>ul {
@@ -57,6 +65,9 @@ nav li a {
     font-size: 1em;
     font-weight: bold;
     color: var(--color-active);
+    border-radius: 14px 14px 0px 0px;
+    -webkit-border-radius: 14px 14px 0px 0px;
+    -moz-border-radius: 14px 14px 0px 0px;
 }
 
 nav li.current-page a {
@@ -120,11 +131,19 @@ footer p {
     color: white;
 }
 
+footer{
+    border-top: 2px solid #5df2d6;
+    background: #00594c;
+    background: linear-gradient(76deg,#00594c 0%, #04957d 80%);
+    background: -webkit-linear-gradient(76deg,#00594c 0%, #04957d 80%);
+    background: -moz-linear-gradient(76deg,#00594c 0%, #04957d 80%);
+}
+
 main p {
     margin-bottom: 16px;
 }
 
-#climalogo{
+#climalogo {
     margin-right: 6px;
 }
 
@@ -140,4 +159,3 @@ main p {
         padding-bottom: 20px;
     }
 }
-                

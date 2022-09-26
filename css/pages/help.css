@@ -1,0 +1,77 @@
+.parrafo{
+    font-weight: bold;
+    font-size: 95%;
+}
+
+#segundo{
+    margin-left: -43px;
+}
+
+#nombre{
+    border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    height: 33px;
+    width: 300px;
+    font-weight: bold;
+    border: 1.5px solid #000000;
+    margin-bottom: 10px;
+}
+
+#email{
+    border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    height: 33px;
+    width: 300px;
+    font-weight: bold;
+    border: 1.5px solid #000000;
+    margin-bottom: 10px;
+}
+
+#mensaje{
+    border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    height: 200px;
+    width: 300px;
+    font-weight: bold;
+    border: 1.5px solid #000000;
+}
+
+label{
+    font-weight: bold;
+}
+
+button{
+    border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    height: 40px;
+    width: 90px;
+    background-color: #00594c;
+    color: white;
+    font-weight: bolder;
+    font-size:90%;
+    border: 0px solid #000000;
+    margin-top: 10px;
+}
+
+#limpiar{
+    margin-left: 55px;
+}
+
+#parrafoemail{
+    border-radius: 16px 16px 16px 16px;
+    -webkit-border-radius: 16px 16px 16px 16px;
+    -moz-border-radius: 16px 16px 16px 16px;
+    border: 0px solid #000000;
+    background-color: rgba(252, 27, 27, 0.87);
+    height: 48px;
+    width: 360px;
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+    font-weight: bold;
+    margin-top: 80px;
+}

@@ -7,11 +7,13 @@
     <title>TUP LC2 - TP Integrador</title>
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages/add-city.css">
 </head>
 
 <body>
     <header>
         <h1>
+            <img src="img/pngegg.png" alt="logo" id="climalogo">
             <span>Clima App</span>
         </h1>
         <nav>
@@ -27,10 +29,17 @@
         <h2>Agregar Ciudad</h2>
         <section>
             <form>
-                <label for="addcity">Ingrese la ciudad a agregar:</label>
+                <label for="addcity">Ingrese la ciudad a agregar:</label><br>
                 <input type="text" id="addcity" name="addcity"><br>
                 <button>Agregar</button>
             </form>
+        </section>
+        <section>
+            <div class="mensajes">
+                <p id="green">Ciudad agregada con éxito</p>
+                <p id="red">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>
+                <p id="yellow">La ciudad ingresada ya se encuentra almacenada</p>
+            </div>
         </section>
         <section id="form-city-list">
             <!-- Sección donde se debe colocar el formulario, con el select y el

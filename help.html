@@ -7,11 +7,13 @@
     <title>TUP LC2 - TP Integrador</title>
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages/help.css">
 </head>
 
 <body>
     <header>
         <h1>
+            <img src="img/pngegg.png" alt="logo" id="climalogo">
             <span>Clima App</span>
         </h1>
         <nav>
@@ -25,14 +27,14 @@
     <!-- Contenido principal de la página -->
     <main>
         <h2>Ayuda Clima App v.1.0</h2>
-        <section>
+        <section id="primer" class="parrafo">
             <p>Esta App te permite consultar el clima de una ciudad en particular utilizando la <br> API de <a
                     href="https://openweathermap.org/api" target="_blank">
                     <font color="blue"><u>OpenWeatherMap.</u></font>
                 </a></p>
 
         </section>
-        <section>
+        <section id="segundo" class="parrafo">
             <p>Para poder consultar el clima, primero deberá <a href="add-city.html""><font color=" blue"><u>Agregar una
                         ciudad</u></font></a> y luego <br> seleccionar la Ciudad en cuestión desde la página <a
                     href="index.html">
@@ -41,18 +43,23 @@
         </section>
         <section>
             <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text"><br>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre"><br>
 
-                <label for="email">Email:</label>
-                <input type="text"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email"><br>
 
-                <label for="mensaje">Mensaje:</label>
+                <label for="mensaje">Mensaje:</label><br>
                 <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea><br>
 
-                <button>Limpiar</button>
-                <button>Enviar</button>
+                <button id="limpiar">Limpiar</button>
+                <button id="enviar">Enviar</button>
             </form>
+        </section>
+        <section>
+            <div id="parrafoemail">
+                <p>Ingrese un <b>Email</b> válido</p>
+            </div>
         </section>
         <section id="form-city-list">
             <!-- Sección donde se debe colocar el formulario, con el select y el

@@ -1,0 +1,36 @@
+#city {
+    border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    height: 40px;
+    width: 200px;
+    font-weight: bold;
+    border: 1.5px solid #000000;
+}
+
+button {
+    border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    height: 40px;
+    width: 97px;
+    background-color: #00594c;
+    color: white;
+    font-weight: bolder;
+    font-size: 90%;
+    border: 0px solid #000000;
+}
+
+.card {
+    border-radius: 23px 23px 23px 23px;
+    -webkit-border-radius: 23px 23px 23px 23px;
+    -moz-border-radius: 23px 23px 23px 23px;
+    box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.50);
+    -webkit-box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.50);
+    margin-top: 40px;
+    width: 280px;
+    height: 330px;
+    text-align: center;
+    font-size:105%
+}
