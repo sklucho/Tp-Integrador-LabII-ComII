@@ -46,6 +46,7 @@ button{
     padding-top: 15px;
     color: white;
     font-weight: bold;
+    display: none;
 }
 
 .mensajes #red{
@@ -61,6 +62,7 @@ button{
     color: white;
     font-weight: bold;
     margin-top: 50px;   
+    display: none;
 }
 
 .mensajes #yellow{
@@ -76,4 +78,5 @@ button{
     color: white;
     font-weight: bold;
     margin-top: 50px;
+    display: none;
 }
