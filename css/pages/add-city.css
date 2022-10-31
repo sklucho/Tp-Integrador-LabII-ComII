@@ -29,12 +29,6 @@ button{
     border: 0px solid #000000;
 }
 
-button:hover{
-    background: linear-gradient(76deg,#00594c 0%, #04957d 80%);
-    background: -webkit-linear-gradient(76deg,#00594c 0%, #04957d 80%);
-    background: -moz-linear-gradient(76deg,#00594c 0%, #04957d 80%);
-}
-
 .mensajes{
     margin-top: 70px;
     margin-left: -10px;
@@ -112,7 +106,7 @@ button:hover{
 
 /* Animation property */
 .mensajes #red, #green, #yellow {
-    animation: wiggle 2s linear infinite;
+    animation: wiggle 3s linear infinite;
 }
 
 /* Keyframes */

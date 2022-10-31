@@ -22,6 +22,7 @@ button {
 }
 
 .card {
+    display: none;
     border-radius: 23px 23px 23px 23px;
     -webkit-border-radius: 23px 23px 23px 23px;
     -moz-border-radius: 23px 23px 23px 23px;
@@ -32,5 +33,5 @@ button {
     width: 280px;
     height: 330px;
     text-align: center;
-    font-size:105%
+    font-size:105%;
 }
