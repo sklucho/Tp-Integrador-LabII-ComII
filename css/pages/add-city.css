@@ -29,9 +29,15 @@ button{
     border: 0px solid #000000;
 }
 
+button:hover{
+    background: linear-gradient(76deg,#00594c 0%, #04957d 80%);
+    background: -webkit-linear-gradient(76deg,#00594c 0%, #04957d 80%);
+    background: -moz-linear-gradient(76deg,#00594c 0%, #04957d 80%);
+}
+
 .mensajes{
     margin-top: 70px;
-    margin-left: 20px;
+    margin-left: -10px;
 }
 
 .mensajes #green{
@@ -39,14 +45,20 @@ button{
     -webkit-border-radius: 16px 16px 16px 16px;
     -moz-border-radius: 16px 16px 16px 16px;
     border: 0px solid #000000;
-    background-color: rgb(35, 145, 71);
-    height: 55px;
-    width: 500px;
     text-align: center;
     padding-top: 15px;
-    color: white;
     font-weight: bold;
     display: none;
+    left: calc(50% - 3em);
+    top: calc(50% - 2em);
+    height: 3em;
+    width: 15em;
+    color: #fff;
+    font-size: 1em;
+    transform-origin: 50% 5em;
+    background: linear-gradient(76deg,#00594c 0%, #04957d 80%);
+    background: -webkit-linear-gradient(76deg,#00594c 0%, #04957d 80%);
+    background: -moz-linear-gradient(76deg,#00594c 0%, #04957d 80%);
 }
 
 .mensajes #red{
@@ -54,15 +66,23 @@ button{
     -webkit-border-radius: 16px 16px 16px 16px;
     -moz-border-radius: 16px 16px 16px 16px;
     border: 0px solid #000000;
-    background-color: rgba(252, 27, 27, 0.87);
-    height: 70px;
-    width: 500px;
     text-align: center;
     padding-top: 15px;
-    color: white;
     font-weight: bold;
     margin-top: 50px;   
     display: none;
+    left: calc(50% - 3em);
+    top: calc(50% - 2em);
+    height: 6em;
+    width: 15em;
+    color: #fff;
+    font-size: 1em;
+    transform-origin: 50% 5em;
+    background: rgb(120,0,0);
+    background: -moz-linear-gradient(16deg, rgba(120,0,0,1) 28%, rgba(147,0,0,1) 61%, rgba(187,0,0,1) 89%, rgba(184,0,0,1) 99%);
+    background: -webkit-linear-gradient(16deg, rgba(120,0,0,1) 28%, rgba(147,0,0,1) 61%, rgba(187,0,0,1) 89%, rgba(184,0,0,1) 99%);
+    background: linear-gradient(16deg, rgba(120,0,0,1) 28%, rgba(147,0,0,1) 61%, rgba(187,0,0,1) 89%, rgba(184,0,0,1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#780000",endColorstr="#b80000",GradientType=1);
 }
 
 .mensajes #yellow{
@@ -70,13 +90,64 @@ button{
     -webkit-border-radius: 16px 16px 16px 16px;
     -moz-border-radius: 16px 16px 16px 16px;
     border: 0px solid #000000;
-    background-color: rgb(255, 196, 0);
-    height: 55px;
-    width: 500px;
     text-align: center;
     padding-top: 15px;
-    color: white;
     font-weight: bold;
     margin-top: 50px;
     display: none;
+    left: calc(50% - 3em);
+    top: calc(50% - 2em);
+    height: 4em;
+    width: 15em;
+    background: rgb(255, 196, 0);
+    color: #fff;
+    font-size: 1em;
+    transform-origin: 50% 5em;
+    background: rgb(170,171,0);
+    background: -moz-linear-gradient(16deg, rgba(170,171,0,1) 28%, rgba(175,176,0,1) 61%, rgba(203,177,0,1) 89%, rgba(231,213,0,1) 99%);
+    background: -webkit-linear-gradient(16deg, rgba(170,171,0,1) 28%, rgba(175,176,0,1) 61%, rgba(203,177,0,1) 89%, rgba(231,213,0,1) 99%);
+    background: linear-gradient(16deg, rgba(170,171,0,1) 28%, rgba(175,176,0,1) 61%, rgba(203,177,0,1) 89%, rgba(231,213,0,1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aaab00",endColorstr="#e7d500",GradientType=1);
 }
+
+/* Animation property */
+.mensajes #red, #green, #yellow {
+    animation: wiggle 2s linear infinite;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+
+    0%,
+    7% {
+        transform: rotateZ(0);
+    }
+
+    15% {
+        transform: rotateZ(-15deg);
+    }
+
+    20% {
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    30% {
+        transform: rotateZ(6deg);
+    }
+
+    35% {
+        transform: rotateZ(-4deg);
+    }
+
+    40%,
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
+
+
