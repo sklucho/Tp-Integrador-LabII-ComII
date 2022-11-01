@@ -104,8 +104,33 @@ button{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aaab00",endColorstr="#e7d500",GradientType=1);
 }
 
+.mensajes #red1{
+    border-radius: 16px 16px 16px 16px;
+    -webkit-border-radius: 16px 16px 16px 16px;
+    -moz-border-radius: 16px 16px 16px 16px;
+    border: 0px solid #000000;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: bold;
+    margin-top: 50px;   
+    display: none;
+    left: calc(50% - 3em);
+    top: calc(50% - 2em);
+    height: 4em;
+    width: 15em;
+    color: #fff;
+    font-size: 1em;
+    transform-origin: 50% 5em;
+    background: rgb(120,0,0);
+    background: -moz-linear-gradient(16deg, rgba(120,0,0,1) 28%, rgba(147,0,0,1) 61%, rgba(187,0,0,1) 89%, rgba(184,0,0,1) 99%);
+    background: -webkit-linear-gradient(16deg, rgba(120,0,0,1) 28%, rgba(147,0,0,1) 61%, rgba(187,0,0,1) 89%, rgba(184,0,0,1) 99%);
+    background: linear-gradient(16deg, rgba(120,0,0,1) 28%, rgba(147,0,0,1) 61%, rgba(187,0,0,1) 89%, rgba(184,0,0,1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#780000",endColorstr="#b80000",GradientType=1);
+}
+
+
 /* Animation property */
-.mensajes #red, #green, #yellow {
+.mensajes #red, #green, #yellow, #red1 {
     animation: wiggle 3s linear infinite;
 }
 

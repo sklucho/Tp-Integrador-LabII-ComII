@@ -1,18 +1,27 @@
-const cardResult = document.querySelector('.card');
+const cardResult = document.querySelector('#card');
 const select = document.querySelector('#city');
 const submit = document.querySelector('#consult');
-const form = document.querySelector('#form');
-const kelvin = 273.15
+const cartel = document.querySelector('#cartel');
+
+//función para poner en uppercase las primera letra de cada palabra
+const capitalizar = (string) => {
+    return string[0].toUpperCase() + string.slice(1).toLowerCase();
+}
 
 submit.addEventListener('click', (e) => {
     
     e.preventDefault();
-    
+
+
+    //haciendo desaparecer el cartel de error despues de 3 seg
     if (select.value == '') {
-        showError('Elija una opción...');
-        return;
+        cartel.style.display= 'block';
+        setTimeout(() => {
+            cartel.style.display= 'none';
+        }, 3000);
     }
 
+    //llamando a la API
     callApi(select.value);
 })
 
@@ -20,49 +29,32 @@ const callApi = async(city) => {
     const apiID = 'b2721f652ea20e6fc0b1334a991bd7a3';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiID}`;
 
-    const respuesta = await fetch(url);
-    const resultado = await respuesta.json();
-
-    if (resultado.cod=='404') {
-        showError('No hay resultados...')
-        return;
+    await fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(ciudades => {
+            let temp1 = `<div class='card'>
+            <h3>${capitalizar(city)}</h3>
+            <img src="https://openweathermap.org/img/wn/${ciudades.weather[0].icon}@2x.png" alt="logo" width="100">
+            <p>Temperatura: ${parseInt(ciudades.main.temp - 273.15)}°</p>
+            <p>Sencación Térmica: ${parseInt(ciudades.main.feels_like - 273.15)}°</p>
+            <p>Humedad: ${ciudades.main.humidity}%</p>
+            <p>Velocidad del Viento: ${parseInt(ciudades.wind.speed * 3.6)}km/h</p>
+            <p>Presión: ${ciudades.main.pressure} mb</p></div>`
+            cardResult.style.display= 'inline';
+            cardResult.innerHTML+=temp1     
+        })
     }
-
-    const{name, main} = resultado;
-    if(!name) return null;
-
-    
-
-    
-                
-}
-
-function cargarDatos(){
-    let cities = localStorage.getItem("CITIES");
-        if (cities) {
-            cities = JSON.parse(cities);
-            sel = document.querySelector(select);
-            sel.innerHTML=`<option value="">${cities}</option>`;
-        } else {
-            cities = [];
-        }
-        return cities;
-}
+                  
 
 
+let local = JSON.parse(localStorage.getItem('CITIES'));
+let temp = '';
 
+local.forEach(ciudades => {
+    temp = `<option value='${ciudades}'>${capitalizar(ciudades)}</option>`;
+    select.innerHTML+=temp;
+});
+ 
 
-
-function showError(message){
-    console.log(message);
-    const alert = document.createElement('p');
-    alert.classList.add('alert-message');
-    alert.innerHTML = message;
-
-    form.appendChild(alert);
-    setTimeout(() => {
-        alert.remove();
-    }, 1000)
-}
 
 

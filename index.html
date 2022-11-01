@@ -30,14 +30,15 @@
         <h2>El Clima Ahora</h2>
         <section id="form-city-list">
             <form id="form">
-                <select name="city" id="city" onload="cargarDatos()">
+                <select name="city" id="city">
                     <option value="" disabled selected>Seleccionar ciudad</option>
                 </select>
                 <button id="consult">Consultar</button>
+                <div id="cartel">Seleccione una ciudad</div>
             </form>
         </section>
         <section id="section-weather-result">
-            <div class="card">
+            <div id="card">
                 <!--<h3>Rosario</h3>
                 <img src="img/979585.png" alt="logo" width="100">
                 <p>Temperatura: 25.31°</p>

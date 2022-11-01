@@ -35,6 +35,10 @@
                 <label for="addcity">Ingrese la ciudad a agregar:</label><br>
                 <input type="text" id="addcity" name="addcity" style="text-transform: uppercase;"><br>
                 <button class="buttons" id="button">Agregar</button>
+                <div id="spinner">
+                    <div class="lds-dual-ring">&nbsp</div>
+                </div>
+                  
             </form>
         </section>
         <section>
@@ -42,6 +46,7 @@
                 <p id="green">Ciudad agregada con éxito</p>
                 <p id="red">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>
                 <p id="yellow">La ciudad ingresada ya se encuentra almacenada</p>
+                <p id="red1">El campo no puede estar vacio</p>
             </div>
         </section>
         <section id="form-city-list">

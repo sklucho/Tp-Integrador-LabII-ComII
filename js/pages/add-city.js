@@ -18,24 +18,42 @@ submit.addEventListener("click", (e) => {
         return cities;
     }
 
-    function addNewCityToLocalStorage() {
+    async function addNewCityToLocalStorage() {
         let cities = getCitiesFromLocalStorage();
         let newCity = document.querySelector('#addcity').value;
         let indice = cities.indexOf(newCity);
 
-        
+
         //validaciones
-        if (indice !== -1) {
-            document.querySelector('#yellow').style.display = 'block';
-        } else if (newCity == 0 || !isNaN(newCity)) {
-            document.querySelector('#red').style.display = 'block';
+        const apiID = 'b2721f652ea20e6fc0b1334a991bd7a3';
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${newCity}&appid=${apiID}`;
+
+        if (newCity == '') {
+            document.querySelector('#red1').style.display = 'block';
         } else {
-            document.querySelector('#green').style.display = 'block';
-            cities.push(newCity);
+
+            const response = await fetch(url);
+            const datos = await response.json()
+                .then(ciudad => {
+                    if (ciudad.cod === '404') {
+                        document.querySelector('#red').style.display = 'block';
+                    } else if (indice !== -1) {
+                        document.querySelector('#yellow').style.display = 'block';
+                    } else {
+                        cities.push(newCity);
+                        localStorage.setItem("CITIES", JSON.stringify(cities));
+                        document.querySelector('#green').style.display = 'block';
+                    }
+                })
+
+
+            if (indice !== -1) {
+                document.querySelector('#yellow').style.display = 'block';
+            }
         }
 
-        localStorage.setItem("CITIES", JSON.stringify(cities));
     }
+
 
     //iniciando la función
     addNewCityToLocalStorage();
