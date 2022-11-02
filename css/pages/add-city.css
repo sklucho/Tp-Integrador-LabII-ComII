@@ -12,6 +12,7 @@ input{
     border: 1.8px solid #000000;
     margin-top: 6px;
     margin-left: -4px;
+    text-align: center;
 }
 
 button{
@@ -127,7 +128,6 @@ button{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#780000",endColorstr="#b80000",GradientType=1);
 }
 
-
 /* Animation property */
 .mensajes #red, #green, #yellow, #red1 {
     animation: wiggle 3s linear infinite;
@@ -167,5 +167,24 @@ button{
     }
 }
 
+/* animación de cargando */
+#loading {
+    margin: 0 0 2em;
+    height: 30px;
+    width: 20%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*
+    Set the color of the icon
+  */
+svg path,
+svg rect {
+    fill: #00594c;
+}
 
 
