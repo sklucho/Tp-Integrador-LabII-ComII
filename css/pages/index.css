@@ -22,19 +22,52 @@ button {
 }
 
 .card {   
-    border-radius: 23px 23px 23px 23px;
-    -webkit-border-radius: 23px 23px 23px 23px;
-    -moz-border-radius: 23px 23px 23px 23px;
     box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.50);
     -webkit-box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.50);
     -moz-box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.50);
     margin-top: 40px;
     width: 280px;
-    height: 330px;
+    height: 350px;
     text-align: center;
     font-size:105%;
     background-color: rgb(247, 247, 247);
+    position: relative;
+    justify-content: center;
+    border-radius: 6px;
+    align-items: center;
 }
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+.card:hover:after {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--rotate), #ffffff, #fafafa 43%, #00594c);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 4s linear infinite;
+}
+
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+
 
 #cartel{
     border-radius: 16px 16px 16px 16px;

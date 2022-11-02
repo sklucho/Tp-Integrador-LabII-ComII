@@ -39,7 +39,9 @@ const callApi = async(city) => {
             <p>Sencación Térmica: ${parseInt(ciudades.main.feels_like - 273.15)}°</p>
             <p>Humedad: ${ciudades.main.humidity}%</p>
             <p>Velocidad del Viento: ${parseInt(ciudades.wind.speed * 3.6)}km/h</p>
-            <p>Presión: ${ciudades.main.pressure} mb</p></div>`
+            <p>Presión: ${ciudades.main.pressure} mbar</p>
+            <p>Visibilidad: ${ciudades.visibility / 1000} km</p></div>`
+
             cardResult.style.display= 'inline';
             cardResult.innerHTML+=temp1     
         })
@@ -54,7 +56,8 @@ local.forEach(ciudades => {
     temp = `<option value='${ciudades}'>${capitalizar(ciudades)}</option>`;
     select.innerHTML+=temp;
 });
- 
+
+
 
 
 
