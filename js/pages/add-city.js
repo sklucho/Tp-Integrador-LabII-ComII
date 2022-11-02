@@ -10,7 +10,7 @@ submit.addEventListener("click", (e) => {
 
     //funciones
 
-    //simbolo de carga
+    //animar el cargando
     async function cargando(){
         let carga = document.querySelector('#loading')
         carga.innerHTML+=`<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -34,8 +34,7 @@ submit.addEventListener("click", (e) => {
     
       setTimeout(() => {
        carga.style.display= 'none';
-    }, 1000);
-        
+    }, 1000);  
     }
 
     //obteniendo valores desde el LocalStorage

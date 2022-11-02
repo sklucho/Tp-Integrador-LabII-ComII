@@ -43,7 +43,7 @@ const callApi = async(city) => {
             <p>Visibilidad: ${ciudades.visibility / 1000} km</p></div>`
 
             cardResult.style.display= 'inline';
-            cardResult.innerHTML+=temp1     
+            cardResult.innerHTML+=temp1; 
         })
     }
                   
