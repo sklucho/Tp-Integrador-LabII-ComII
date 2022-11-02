@@ -31,42 +31,17 @@ button {
     text-align: center;
     font-size:105%;
     background-color: rgb(247, 247, 247);
-    position: relative;
     justify-content: center;
     border-radius: 6px;
     align-items: center;
 }
 
-@property --rotate {
-    syntax: "<angle>";
-    initial-value: 132deg;
-    inherits: false;
+
+.card:hover {
+    background: linear-gradient(76deg,#00594c18 0%, #04957d18 80%);
+    background: -webkit-linear-gradient(76deg,#00594c18 0%, #04957d18 80%);
+    background: -moz-linear-gradient(76deg,#00594c18 0%, #04957d18 80%);
 }
-
-.card:hover:after {
-    content: "";
-    width: 104%;
-    height: 102%;
-    border-radius: 8px;
-    background-image: linear-gradient(var(--rotate), #ffffff, #fafafa 43%, #00594c);
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 4s linear infinite;
-}
-
-
-@keyframes spin {
-    0% {
-        --rotate: 0deg;
-    }
-
-    100% {
-        --rotate: 360deg;
-    }
-}
-
 
 
 #cartel{
